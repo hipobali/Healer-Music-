@@ -50,13 +50,14 @@
                                     <td>{{$songs->singer->singer_name}}</td>
                                     <td>{{$songs->album->album_name}}</td>
                                     <td>{{$songs->category->cat_name}}</td>
-                                    <td class="col-sm-3">
+                                    <td>
                                         @if($songs->song_file)
                                         <audio controls src="../songfiles/{{$songs->song_file}}"></audio>
                                         @endif
                                     </td>
                                     <td >
-                                        <a href="{{route('deleteSong',['song'=>$songs->id])}}" class="btn btn-primary "><i class="fa fa-trash"></i> </a>
+                                        <a href="{{route('deleteSong',['song'=>$songs->id])}}" class="btn btn-primary "><i class="fa fa-trash"></i> </a></td>
+                                    <td>
                                         <a href="#" data-toggle="modal" data-target="#e{{$songs->id}}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
                                         <input type="hidden" name="id" id="{{$songs->id}}">
                                         <div class="modal" tabindex="-1" id="e{{$songs->id}}" role="dialog">

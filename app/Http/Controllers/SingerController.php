@@ -124,11 +124,11 @@ class SingerController extends Controller
         Storage::disk('songfile')->put($song_file_name, file::get($song_file));
         return redirect()->route('song');
     }
-    public function updateAlbum(Request $request)
-     {   $id=$request['id'];
-         $album=Album::whereId($id)->first();
-        $album->album_name = $request['album_name'];
+     public function updateAlbum(Request $request){
+        $id=$request['id'];
+        $album=Album::whereId($id)->first();
+        $album->album_name=$request['album_name'];
         $album->update();
         return redirect()->route('album');
-    }
+     }
 }

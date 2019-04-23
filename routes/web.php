@@ -130,7 +130,7 @@ Route::group(['middleware'=>'auth'], function (){
             'uses'=>'SingerController@updateSong',
             'as'=>'updateSong'
         ]);
-        Route::post('updateAlbum/{id]',[
+        Route::post('updateAlbum/{id}',[
            'uses'=>'SingerController@updateAlbum',
            'as'=>'updateAlbum'
         ]);

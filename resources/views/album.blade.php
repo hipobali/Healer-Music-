@@ -58,10 +58,10 @@
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form method="post" action="{{route('updateAlbum')}}">
+                                                                <form method="post" action="{{route('updateAlbum',['album'=>$albums->id])}}">
                                                                     <div class="form-group">
                                                                         <label for="album_name" class="control-label" >Album Name</label>
-                                                                        <input value="{{$albums->album_name}}" type="text" id="album_name" name="album_name" class="form-control">
+                                                                        <input  type="text" id="album_name" name="album_name" value="{{$albums->album_name}}" class="form-control">
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
