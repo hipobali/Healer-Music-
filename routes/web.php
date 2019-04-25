@@ -27,6 +27,20 @@ Route::get('/',[
    'uses'=>'AuthController@getWelcome',
    'as'=>'welcome'
 ]);
+Route::get('song.cat/{id}',[
+   'uses'=>'AuthController@getSongCat',
+   'as'=>'song.cat'
+]);
+Route::get('song.singer/{id}',[
+    'uses'=>'AuthController@getSongSinger',
+    'as'=>'song.singer'
+]);
+Route::get('song.album/{id}',[
+    'uses'=>'AuthController@getSongAlbum',
+    'as'=>'song.album'
+]);
+
+
 
 Route::group(['middleware'=>'auth'], function (){
 
@@ -136,6 +150,7 @@ Route::group(['middleware'=>'auth'], function (){
            'uses'=>'SingerController@updateAlbum',
            'as'=>'updateAlbum'
         ]);
+
 
     });
 

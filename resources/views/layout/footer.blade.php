@@ -1,0 +1,1 @@
+<div class="pt-1  card-footer fixed-bottom text-center" id="footer" style="background:mistyrose;" >Healer Music @copyright {{date('Y')}}</div>
