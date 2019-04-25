@@ -13,7 +13,7 @@
 
 
 
-Route::get('/login',[
+ Route::get('/login',[
     'uses'=>'AuthController@getLogin',
     'as'=>'login'
 ]);
@@ -23,12 +23,14 @@ Route::post('/login',[
     'as'=>'login'
 ]);
 
+Route::get('/',[
+   'uses'=>'AuthController@getWelcome',
+   'as'=>'welcome'
+]);
 
 Route::group(['middleware'=>'auth'], function (){
 
-    Route::get('/', function (){
-        return redirect()->route('dashboard');
-    });
+
 
 
     Route::group(['prefix'=>'user'], function (){

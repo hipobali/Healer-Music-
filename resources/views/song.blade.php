@@ -31,8 +31,8 @@
                     <div class="panel-heading">
                         Song data
                     </div>
-                    <div class="panel-body">
-                        <table class="table table-hover">
+                    <div class="table-responsive panel-body">
+                        <table  class=" table table-hover">
                             <tr>
                                 <td>Id</td>
                                 <td>Song Name</td>

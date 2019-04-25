@@ -28,7 +28,7 @@
     <div class="login-box">
         @if(Session('error')) <div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span> {{Session('error')}}</div> @endif
         <div class="login-logo">
-            <h1>Your Logo</h1>
+            <span class="logo-lg"><img src="../../ntg/morehead-state-eagle-png-logo-8.png" class="img-circle" style="width: 50px"><b>Healer Music</b></span>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
@@ -71,7 +71,7 @@
             </form>
 
             <div class="social-auth-links text-center">
-                <h2>Your Client Logo</h2>
+                <span class="logo-lg"><img src="../../ntg/6286fe8525b87ba5a286a46bd9a514e3.png" class="img-circle" style="width: 50px"><b>Healer Music</b></span>
             </div>
 
 

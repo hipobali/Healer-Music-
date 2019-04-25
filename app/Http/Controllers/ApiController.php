@@ -31,8 +31,15 @@ class ApiController extends Controller
     public function getSearch($q){
         $song=Song::where('id','LIKE',"%$q%")->orwhere('song_name','LIKE',"%$q%")->orwhere('singer_id','LIKE',"%$q%")->orwhere('album_id','LIKE',"%$q%")->orwhere('category_id','LIKE',"%$q%")->orwhere('song_file','LIKE',"%$q%")->with('singer')->with('album')->with('category')->get();
             return response()->json($song);
+    }
+    public function getOneSong($id){
+        $song=Song::with('singer')->with('category')->with('album')->whereId($id)->first();
+        if($song){
+            return response()->json($song);
+        }else{
+            return response()->json(['err'=>'Failed to get song']);
 
-
+        }
 
     }
 }

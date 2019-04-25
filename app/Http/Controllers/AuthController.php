@@ -7,6 +7,9 @@ use Auth;
 
 class AuthController extends Controller
 {
+    public function getWelcome(){
+        return view('welcome');
+    }
     public function getLogin(){
         return view ('auth.login');
     }
